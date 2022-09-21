@@ -1,0 +1,51 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Juego/Plataformas/Plataformacorta.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Juego/Objetos/ZanahoriaLlave.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Juego/Objetos/Portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Juego/Enemigos/Volon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Plataformas/Plataformacortamadera.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego/Objetos/PlataformaTrampa.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Juego/Objetos/PlataformaImpulsora.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Juego/Objetos/MonedaOro.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Juego/Objetos/Pinchos.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Juego/Objetos/MonedaPlata.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Juego/Enemigos/Nubon.tscn" type="PackedScene" id=12]
+
+[node name="Nivel7" instance=ExtResource( 1 )]
+nivel_actual = "res://Juego/Niveles/Nivel7.tscn"
+
+[node name="Plataformacorta" parent="PlataformasCortas" index="0" instance=ExtResource( 2 )]
+position = Vector2( 133, 552 )
+
+[node name="Plataformacortamadera" parent="PlataformasCortas" index="1" instance=ExtResource( 6 )]
+position = Vector2( 1132, 335 )
+
+[node name="PlataformaTrampa" parent="PlataformasCortas" index="2" instance=ExtResource( 7 )]
+position = Vector2( 638, 557 )
+
+[node name="PlataformaImpulsora" parent="PlataformasCortas" index="3" instance=ExtResource( 8 )]
+position = Vector2( 889, 473 )
+
+[node name="Cristobal" parent="Enemigos" index="0" instance=ExtResource( 5 )]
+position = Vector2( 362, 591 )
+
+[node name="Pinchos" parent="Enemigos" index="1" instance=ExtResource( 10 )]
+position = Vector2( 1168, 323 )
+
+[node name="Nubon" parent="Enemigos" index="2" instance=ExtResource( 12 )]
+position = Vector2( 1043, -182 )
+
+[node name="MonedaPlata" parent="Monedas" index="0" instance=ExtResource( 11 )]
+position = Vector2( 452, 405 )
+
+[node name="MonedaOro" parent="Monedas" index="1" instance=ExtResource( 9 )]
+position = Vector2( 601, 440 )
+
+[node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 3 )]
+position = Vector2( 941, 178 )
+
+[node name="Portal" parent="." index="9" instance=ExtResource( 4 )]
+position = Vector2( 1340, 202 )
+proximo_nivel = "res://Juego/Niveles/Nivel8.tscn"
